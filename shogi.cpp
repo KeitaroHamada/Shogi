@@ -12,6 +12,7 @@ class Koma{
             this->y=y;
             this->name=name;
         }
+
         virtual 
 }
 class Hu{
