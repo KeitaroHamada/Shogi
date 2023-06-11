@@ -15,7 +15,7 @@ class Koma{
         virtual 
 }
 class Hu{
-omaerazeiinnsne
+
 }
 class showBan{
 
