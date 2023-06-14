@@ -2,30 +2,23 @@
 #include<cstring>
 #include<vector>
 using namespace std;
-enum Kansuuji{ä¸€,äºŒ,ä¸‰,å››,äº”,å…­,ä¸ƒ,å…«,ä¹};
-class Koma{
-    public:
-    int getx();
-    int gety();
-};
 class Field{
     private:
         vector<Koma>koma;
     public:
+
         void showField(){
-            Koma first[9][9];
-
-            cout << "ï¼™ï¼˜ï¼—ï¼–ï¼•ï¼”ï¼“ï¼’ï¼‘ \n";
+            string kansuuji[9]={"ˆê","“ñ","O","l","ŒÜ","˜Z","µ","”ª","‹ã"};
+            Koma k[9][9];
             for(int i=0;i<koma.size();i++){
-                switch(koma[i].getx()){
-                    case 0 : 
-                        for(int j=0;j<9;j++){
-                            if(koma[i].gety()==j){
-                                first[j] = 
-                            }
-                        }
-                }
+                k[koma[i].getx()][koma[i].gety()]=koma[i];
             }
-
+            cout << "‚X‚W‚V‚U‚T‚S‚R‚Q‚P \n";
+            for(int j=0;j<9;j++){
+                for(int i=0;i<9;i++){
+                    cout << k[i][j].getName();
+                }
+                cout << kansuuji[j] << endl;
+            }
         }
 };
