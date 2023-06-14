@@ -7,7 +7,7 @@ class Koma{
     private:
         int x,y;
         bool Nalustate;
-        char k[9][9]; //どこで定義するの？
+        char k[9][9]; //二次元配列どこで定義するの？
         Team team;
         Role role;
     public:
