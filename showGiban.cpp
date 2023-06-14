@@ -8,12 +8,12 @@ class Field{
     public:
 
         void showField(){
-            string kansuuji[9]={"ˆê","“ñ","O","l","ŒÜ","˜Z","µ","”ª","‹ã"};
+            string kansuuji[9]={"ä¸€","äºŒ","ä¸‰","å››","äº”","å…­","ä¸ƒ","å…«","ä¹"};
             Koma k[9][9];
             for(int i=0;i<koma.size();i++){
                 k[koma[i].getx()][koma[i].gety()]=koma[i];
             }
-            cout << "‚X‚W‚V‚U‚T‚S‚R‚Q‚P \n";
+            cout << "ï¼™ï¼˜ï¼—ï¼–ï¼•ï¼”ï¼“ï¼’ï¼‘ \n";
             for(int j=0;j<9;j++){
                 for(int i=0;i<9;i++){
                     cout << k[i][j].getName();
