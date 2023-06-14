@@ -17,6 +17,9 @@ class Koma{
         int gety(){
             return y;
         };
+        char getName(int x, int y)}{
+            return k[x][y];
+        }
         void Steel(Team t){
             if(t==team1){
                 t=team2;
