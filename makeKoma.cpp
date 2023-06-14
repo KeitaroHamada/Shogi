@@ -7,6 +7,7 @@ class Koma{
     private:
         int x,y;
         bool Nalustate;
+        char k[9][9]; //どこで定義するの？
         Team team;
         Role role;
     public:
@@ -35,6 +36,109 @@ class Koma{
                     case Kin    : k[x][y]='金';break;
                     case Ou     : k[x][y]='王';break;
                     case Null   : k[x][y]='　';break;
+                }
+            }
+        };
+        void setPosition(){
+            switch(x){
+                case 0 : switch(y){
+                    case 0 : k[x][y]='香';break;
+                    case 1 : k[x][y]='桂';break;
+                    case 2 : k[x][y]='銀';break;
+                    case 3 : k[x][y]='金';break;
+                    case 4 : k[x][y]='王';break;
+                    case 5 : k[x][y]='金';break;
+                    case 6 : k[x][y]='銀';break;
+                    case 7 : k[x][y]='桂';break;
+                    case 8 : k[x][y]='香';break;
+                }
+                case 1 : switch(y){
+                    case 0 : k[x][y]='　';break;
+                    case 1 : k[x][y]='飛';break;
+                    case 2 : k[x][y]='　';break;
+                    case 3 : k[x][y]='　';break;
+                    case 4 : k[x][y]='　';break;
+                    case 5 : k[x][y]='　';break;
+                    case 6 : k[x][y]='　';break;
+                    case 7 : k[x][y]='角';break;
+                    case 8 : k[x][y]='　';break;
+                }
+                case 2 : switch(y){
+                    case 0 : k[x][y]='歩';break;
+                    case 1 : k[x][y]='歩';break;
+                    case 2 : k[x][y]='歩';break;
+                    case 3 : k[x][y]='歩';break;
+                    case 4 : k[x][y]='歩';break;
+                    case 5 : k[x][y]='歩';break;
+                    case 6 : k[x][y]='歩';break;
+                    case 7 : k[x][y]='歩';break;
+                    case 8 : k[x][y]='歩';break;
+                }
+                case 3 : switch(y){
+                    case 0 : k[x][y]='　';break;
+                    case 1 : k[x][y]='　';break;
+                    case 2 : k[x][y]='　';break;
+                    case 3 : k[x][y]='　';break;
+                    case 4 : k[x][y]='　';break;
+                    case 5 : k[x][y]='　';break;
+                    case 6 : k[x][y]='　';break;
+                    case 7 : k[x][y]='　';break;
+                    case 8 : k[x][y]='　';break;
+                }
+                case 4 : switch(y){
+                    case 0 : k[x][y]='　';break;
+                    case 1 : k[x][y]='　';break;
+                    case 2 : k[x][y]='　';break;
+                    case 3 : k[x][y]='　';break;
+                    case 4 : k[x][y]='　';break;
+                    case 5 : k[x][y]='　';break;
+                    case 6 : k[x][y]='　';break;
+                    case 7 : k[x][y]='　';break;
+                    case 8 : k[x][y]='　';break;
+                }
+                case 5 : switch(y){
+                    case 0 : k[x][y]='　';break;
+                    case 1 : k[x][y]='　';break;
+                    case 2 : k[x][y]='　';break;
+                    case 3 : k[x][y]='　';break;
+                    case 4 : k[x][y]='　';break;
+                    case 5 : k[x][y]='　';break;
+                    case 6 : k[x][y]='　';break;
+                    case 7 : k[x][y]='　';break;
+                    case 8 : k[x][y]='　';break;
+                }
+                case 6 : switch(y){
+                    case 0 : k[x][y]='歩';break;
+                    case 1 : k[x][y]='歩';break;
+                    case 2 : k[x][y]='歩';break;
+                    case 3 : k[x][y]='歩';break;
+                    case 4 : k[x][y]='歩';break;
+                    case 5 : k[x][y]='歩';break;
+                    case 6 : k[x][y]='歩';break;
+                    case 7 : k[x][y]='歩';break;
+                    case 8 : k[x][y]='歩';break;
+                }
+                case 7 : switch(y){
+                    case 0 : k[x][y]='　';break;
+                    case 1 : k[x][y]='角';break;
+                    case 2 : k[x][y]='　';break;
+                    case 3 : k[x][y]='　';break;
+                    case 4 : k[x][y]='　';break;
+                    case 5 : k[x][y]='　';break;
+                    case 6 : k[x][y]='　';break;
+                    case 7 : k[x][y]='飛';break;
+                    case 8 : k[x][y]='　';break;
+                }
+                case 8 : switch(y){
+                    case 0 : k[x][y]='香';break;
+                    case 1 : k[x][y]='桂';break;
+                    case 2 : k[x][y]='銀';break;
+                    case 3 : k[x][y]='金';break;
+                    case 4 : k[x][y]='王';break;
+                    case 5 : k[x][y]='金';break;
+                    case 6 : k[x][y]='銀';break;
+                    case 7 : k[x][y]='桂';break;
+                    case 8 : k[x][y]='香';break;
                 }
             }
         };
