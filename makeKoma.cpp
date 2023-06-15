@@ -1,7 +1,7 @@
 #include<iostream>
 #include<cstring>
 using namespace std;
-enum Team{team1, team2, nothing};
+enum Team{team1, team2};
 enum Role{Hu, Hisya, Kaku, Kyosya, Keima, Gin, Kin, Ou, Null};
 class Koma{
     private:
@@ -38,8 +38,11 @@ class Koma{
         string getname(){
             return name;
         };
-        void Stolen(Team wit){
-                wit=nothing;
+        void Stolen(){
+            isAlive=false;
+        }
+        void Put(){
+             isAlive=true;
         }
         void isNaru(bool naruState, Role r){
             naruState=true;
