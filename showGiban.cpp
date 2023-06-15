@@ -2,6 +2,7 @@
 #include<cstring>
 #include<vector>
 using namespace std;
+enum Team{nothing,team1,team2};
 class Field{
     private:
         vector<Koma>koma;//長さを自由に変えられるKoma型の配列のようなもの
@@ -15,7 +16,10 @@ class Field{
             cout << "９８７６５４３２１ \n";
             for(int j=0;j<9;j++){
                 for(int i=0;i<9;i++){
-                    cout << k[i][j].getName();
+                    if(k[i][j].getTeam()==team1){
+                        cout << "\x1b[33m" << k[i][j].getName() << "\x1b[0m";//もしteam1なら黄色で出力
+                    }
+                    else{cout << k[i][j].getName();}
                 }
                 cout << kansuuji[j] << endl;
             }
