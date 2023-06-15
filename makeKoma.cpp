@@ -17,7 +17,8 @@ class Koma{
             this->y=y;
         }
         void setName(Role r){
-           switch(r){
+            role=r;
+            switch(r){
                     case Hu     : name='歩';break;
                     case Hisya  : name='飛';break;
                     case Kaku   : name='角';break;
@@ -29,6 +30,9 @@ class Koma{
                     case Null   : name='　';break;
                 }
         }
+        void setTaem(Team t){
+            team=t;
+        }
         int getx(){
             return x;
         }
@@ -37,7 +41,13 @@ class Koma{
         }
         string getname(){
             return name;
-        };
+        }
+        bool getisAlive(){
+            return isAlive;
+        }
+        Team getTeam(){
+            return team;
+        }
         void Stolen(){
             isAlive=false;
         }
