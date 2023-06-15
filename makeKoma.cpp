@@ -48,15 +48,18 @@ class Koma{
         Team getTeam(){
             return team;
         }
+        Role getRole(){
+            return role;
+        }
         void Stolen(){
             isAlive=false;
         }
         void Put(){
              isAlive=true;
         }
-        void isNaru(bool naruState, Role r){
+        void isNaru(){
             naruState=true;
-            switch(r){
+            switch(this->role){
                     case Hu     : name='と';break;
                     case Hisya  : name='龍';break;
                     case Kaku   : name='馬';break;
