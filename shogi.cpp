@@ -39,27 +39,31 @@ class Koma{
 };
 
 void Move(Koma* A,Koma* a,Koma* B,Koma* b){
-
-    
-    int tmpAx = A->getx();
-    int tmpAy = A->gety();
-
-    int tmpax = a->getx();
-    int tmpay = a->gety();
-
-    A->setPosition(B->getx(),B->gety());
-    B->setPosition(tmpAx,tmpAy);
-
-    a->setPosition(b->getx(),b->gety());
-    b->setPosition(tmpax,tmpay);
-
-    if(B->isAlive()){
-        Role tmpBR = B->getRole();
-        B->setName(b->getRole());
-        b->setName(tmpBR);
-        B->Stolen();
-        b->put();
+    if(B->getRole()=="Ou"){
+        cout <<"You Win"<<endl;
     }
+    else{
+        int tmpAx = A->getx();
+        int tmpAy = A->gety();
+
+        int tmpax = a->getx();
+        int tmpay = a->gety();
+
+        A->setPosition(B->getx(),B->gety());
+        B->setPosition(tmpAx,tmpAy);
+
+        a->setPosition(b->getx(),b->gety());
+        b->setPosition(tmpax,tmpay);
+
+        if(B->isAlive()){
+            Role tmpBR = B->getRole();
+            B->setName(b->getRole());
+            b->setName(tmpBR);
+            B->Stolen();
+            b->put();
+        }
+    }
+    
 }
 
 if(tmpb!='e'&&tmpb!='o'){//移動先を持ち駒に入れる
