@@ -1,7 +1,7 @@
 #include<iostream>
 #include<cstring>
 using namespace std;
-enum Team{team1, team2};
+enum Team{team1, team2, nothing};
 enum Role{Hu, Hisya, Kaku, Kyosya, Keima, Gin, Kin, Ou, Null};
 class Koma{
     private:
@@ -12,30 +12,28 @@ class Koma{
         Role role;
         string name;
     public:
+        void setPosition(int x, int y){
+            this->x=x;
+            this->y=y;
+        }
         int getx(){
             return x;
-        };
+        }
         int gety(){
             return y;
+        }
+        string getname(){
+            return name;
         };
-        string getName(string n){
-            return n;
-        };
-        void Steel(Team t){
-            if(t==team1){
-                t=team2;
-            }else{
-                t=team2;
-            }
-        };
-        void isNaru(Team t,int y){
-            if(t==team1&&y<=2){
+        void Stolen(Team wit){
+                wit=nothing;
+        }
+        bool isNaru(Team t,int y){
+            if((t==team1&&y<=2)||(t==team2&&y>=6)){
                 naruState=true;
-            }else if(t==team2&&y<=2){
+            }else{
                 naruState=false;
             }
-        };
-        void setPosition(){
-            
+            return naruState;
         }
 };
