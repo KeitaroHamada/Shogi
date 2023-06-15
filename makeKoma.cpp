@@ -55,7 +55,7 @@ class Koma{
             isAlive=false;
         }
         void Put(){
-             isAlive=true;
+            isAlive=true;
         }
         void isNaru(){
             naruState=true;
