@@ -16,6 +16,19 @@ class Koma{
             this->x=x;
             this->y=y;
         }
+        void setName(Role r){
+           switch(r){
+                    case Hu     : name='歩';break;
+                    case Hisya  : name='飛';break;
+                    case Kaku   : name='角';break;
+                    case Kyosya : name='香';break;
+                    case Keima  : name='桂';break;
+                    case Gin    : name='銀';break;
+                    case Kin    : name='金';break;
+                    case Ou     : name='王';break;
+                    case Null   : name='　';break;
+                }
+        }
         int getx(){
             return x;
         }
@@ -28,12 +41,18 @@ class Koma{
         void Stolen(Team wit){
                 wit=nothing;
         }
-        bool isNaru(Team t,int y){
-            if((t==team1&&y<=2)||(t==team2&&y>=6)){
-                naruState=true;
-            }else{
-                naruState=false;
-            }
-            return naruState;
+        void isNaru(bool naruState, Role r){
+            naruState=true;
+            switch(r){
+                    case Hu     : name='と';break;
+                    case Hisya  : name='龍';break;
+                    case Kaku   : name='馬';break;
+                    case Kyosya : name='金';break;
+                    case Keima  : name='金';break;
+                    case Gin    : name='金';break;
+                    case Kin    : name='金';break;
+                    case Ou     : name='王';break;
+                    case Null   : name='　';break;
+                }
         }
 };
