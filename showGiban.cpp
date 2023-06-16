@@ -16,10 +16,10 @@ class Field{
             cout << "９８７６５４３２１ \n";
             for(int j=0;j<9;j++){
                 for(int i=0;i<9;i++){
-                    if(k[i][j].getTeam()==team1){
+                    if(k[i][j].getTeam()==team1&&k[i][j].getisAlive()==true){
                         cout << "\x1b[33m" << k[i][j].getName() << "\x1b[0m";//もしteam1なら黄色で出力
                     }
-                    else{cout << k[i][j].getName();}
+                    else if(k[i][j].getisAlive()==true){cout << k[i][j].getName();}
                 }
                 cout << kansuuji[j] << endl;
             }
