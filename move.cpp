@@ -1,72 +1,31 @@
 #include<iostream>
 #include<cstring>
-using namespace std;
-enum Team{team1, team2, nothing};
-enum Role{Hu, Hisya, Kaku, Kyosya, Keima, Gin, Kin, Ou, Null};
-class Koma{
-    private:
-        int x,y;
-        bool isAlive;
-        bool naruState;
-        Team team;
-        Role role;
-        string name;
-    public:
-        void setPosition(int x, int y){
-            this->x=x;
-            this->y=y;
-        }
-        int getx(){
-            return x;
-        }
-        int gety(){
-            return y;
-        }
-        string getname(){
-            return name;
-        };
-        void Stolen(Team wit){
-                wit=nothing;
-        }
-        bool isNaru(Team t,int y){
-            if((t==team1&&y<=2)||(t==team2&&y>=6)){
-                naruState=true;
-            }else{
-                naruState=false;
-            }
-            return naruState;
-        }
-};
 
 
 void Take(Koma* p,Koma* q){
-    int tmpPx = p->getx();
-    int tmpPy = p->gety();
-    p->setPosition(q->getx(),q->gety());
-    q->setPosition(tmpPx,tmpPy);
+    Koma tmp=*p;
+    *p=*q;
+    *q=tmp;
 }
-void motiChange(Koma* r,Koma* i){
-    Role tmpr = r->getRole();
-    r->setName(i->getRole());
-    i->setName(tmpr);
-    r->Stolen();
-    i->put();
-}
-void Move(Koma* A,Koma* a,Koma* B,Koma* b){
-    if(B->getRole()=="Ou"){
+
+//駒の配列の先頭アドレス、移動前の座標と移動後の座標を受け取り、配列の中身を入れ替える。
+void Move(Koma* k,int x,int y,int X,int Y){
+    Koma* A=k[x][y];
+    Koma* C=k[X][Y];
+    if(C->getRole()=="Ou"){
         cout <<"You Win"<<endl;
     }
     else{
-        if(A->isAlive()){
-            motiCange(A,a);
+        if(!A->getisAlive()){
+            A->put();
         }
-
-        Take(A,B);
-        Take(a,b);
-
-        if(B->isAlive()){
-            motiChange(B,b);
+        if(C->getisAlive()){
+            C->Stolen();
         }
+        Take(A,C);
+        k[x][y]=A;
+        k[X][Y]=C;
+        
     }
     
 }
