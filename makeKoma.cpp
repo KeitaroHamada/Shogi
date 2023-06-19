@@ -26,11 +26,11 @@ class makeKoma{
         void rePut();//最初に駒が置かれたときに成らないのでfalseを代入する関数
         void isNaru();//駒が成っていることを記憶して名前を変える関数
 };
-void makeKoma::setPosition(const int x, const int y){//class Roleで定義
+void makeKoma::setPosition(const int x, const int y){//class Role内で定義
             this->x=x;
             this->y=y;
 }
-void makeKoma::setName(const Role r){//class Roleで定義
+void makeKoma::setName(const Role r){//class Role内で定義
         this->role=r;
         switch(r){
             case Hu     : name='歩';break;
@@ -44,7 +44,7 @@ void makeKoma::setName(const Role r){//class Roleで定義
             case Null   : name='　';break;
         }
 }
-void makeKoma::setTaem(const Team t){//class Roleで定義
+void makeKoma::setTaem(const Team t){//class Role内で定義
         this->team=t;
 }
 int makeKoma::getx(){
