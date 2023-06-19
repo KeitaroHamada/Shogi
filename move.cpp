@@ -1,72 +1,39 @@
 #include<iostream>
 #include<cstring>
-using namespace std;
-enum Team{team1, team2, nothing};
-enum Role{Hu, Hisya, Kaku, Kyosya, Keima, Gin, Kin, Ou, Null};
-class Koma{
+
+class Move{
     private:
-        int x,y;
-        bool isAlive;
-        bool naruState;
-        Team team;
-        Role role;
-        string name;
-    public:
-        void setPosition(int x, int y){
-            this->x=x;
-            this->y=y;
+        Koma k[9][9];
+
+        void Take(Koma* p,Koma* q){
+            Koma tmp=*p;
+            *p=*q;
+            *q=tmp;
         }
-        int getx(){
-            return x;
-        }
-        int gety(){
-            return y;
-        }
-        string getname(){
-            return name;
-        };
-        void Stolen(Team wit){
-                wit=nothing;
-        }
-        bool isNaru(Team t,int y){
-            if((t==team1&&y<=2)||(t==team2&&y>=6)){
-                naruState=true;
-            }else{
-                naruState=false;
+        void wincheck(Koma x){
+            if(k.getRole()=="Ou"){
+                cout <<"You Win"<<endl;
             }
-            return naruState;
         }
-};
-
-
-void Take(Koma* p,Koma* q){
-    int tmpPx = p->getx();
-    int tmpPy = p->gety();
-    p->setPosition(q->getx(),q->gety());
-    q->setPosition(tmpPx,tmpPy);
-}
-void motiChange(Koma* r,Koma* i){
-    Role tmpr = r->getRole();
-    r->setName(i->getRole());
-    i->setName(tmpr);
-    r->Stolen();
-    i->put();
-}
-void Move(Koma* A,Koma* a,Koma* B,Koma* b){
-    if(B->getRole()=="Ou"){
-        cout <<"You Win"<<endl;
-    }
-    else{
-        if(A->isAlive()){
-            motiCange(A,a);
-        }
-
-        Take(A,B);
-        Take(a,b);
-
-        if(B->isAlive()){
-            motiChange(B,b);
+    public:
+    Move(Koma* koma){
+        for(int i=0;i<9;i++){
+            for(int j=0;j<9;j++){
+                k[i][j]=koma[i][j];
+            }
         }
     }
-    
+//駒の配列の先頭アドレス、移動前の座標と移動後の座標を受け取り、配列の中身を入れ替える。
+    void move(int x,int y,int X,int Y){
+        Koma* A=k[x][y];
+        Koma* C=k[X][Y];
+        wincheck(*C);
+        if(!A->getisAlive()){
+            A->put();
+        }
+        if(C->getisAlive()){
+            C->Stolen();
+        }
+        Take(A,C);
+    }
 }
