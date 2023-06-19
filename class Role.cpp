@@ -61,3 +61,4 @@ void makeRole::isNaru(){
 void makeRole::rePut(){
         this->naruState=false;
 }
+//駒がとられたときの関数作る
