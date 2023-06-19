@@ -36,4 +36,4 @@ class Move{
         }
         Take(A,C);
     }
-}
+};
