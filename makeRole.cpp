@@ -17,7 +17,7 @@ class makeRole{
         Role getRole();//駒の役割を返す関数
         void isNaru();//駒が成っていることを記憶して名前を変える関数
         void rePut();//最初に駒が置かれたときに成らないのでfalseを代入する関数
-        void changeTeam();//駒が取られたときにチームを変更する関数
+        void changeTeam();//駒が取られたときにチームを変更する関数class Komaから呼び出される
 };
 void makeRole::setName(const Role r){
         this->role=r;

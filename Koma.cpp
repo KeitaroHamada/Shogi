@@ -30,7 +30,7 @@ bool Koma:: getisAlive(){
 }
 void Koma::Stolen(){
         this->isAlive=false;
-        cahengeTeam();
+        cahengeTeam();//class makeroleの所にある
 }
 void Koma::Put(){
         this->isAlive=true;
