@@ -24,10 +24,4 @@ class Field{
                 cout << kansuuji[j] << endl;
             }
         }
-        void brindField(){
-            Koma b[9][9];
-            for(int i=0;i<koma.size();i++){
-                b[koma[i].getx()][koma[i].gety()]=koma[i];
-            }
-        }
 };
