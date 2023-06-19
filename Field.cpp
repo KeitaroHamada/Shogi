@@ -1,14 +1,9 @@
 #include<iostream>
 #include<cstring>
-#include<vector>
+#include "Field.h"
 using namespace std;
-enum Team{nothing,team1,team2};
-class Field{
-    private:
-        vector<Koma>koma;//長さを自由に変えられるKoma型の配列のようなもの
-    public:
-        void showField(){ //将棋盤を出力する関数、class Komaにはgetx(),gety(),getName(),getTeam()が必要
-            string kansuuji[9]={"一","二","三","四","五","六","七","八","九"};
+void Field::showField(){
+    string kansuuji[9]={"一","二","三","四","五","六","七","八","九"};
             Koma k[9][9];
             for(int i=0;i<koma.size();i++){
                 k[koma[i].getx()][koma[i].gety()]=koma[i];
@@ -23,5 +18,4 @@ class Field{
                 }
                 cout << kansuuji[j] << endl;
             }
-        }
-};
+}
