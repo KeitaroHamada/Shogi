@@ -16,14 +16,8 @@ void makeRole::setName(const Role r){
             case Null   : name='　';break;
         }
 }
-void makeRole::setTaem(const Team t){
-        this->team=t;
-}
 string makeRole::getname(){
         return name;
-}
-Team makeRole::getTeam(){
-        return team;
 }
 Role makeRole::getRole(){
         return role;
@@ -44,11 +38,4 @@ void makeRole::isNaru(){
 }
 void makeRole::rePut(){
         this->naruState=false;
-}
-void makeRole::changeTeam(){
-        if(team==team1){
-                team=team2;
-        }else if(team==team2){
-                team=team1;
-        }
 }
