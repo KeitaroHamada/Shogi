@@ -9,10 +9,10 @@ void Koma::setPosition(const int x, const int y){
 void Koma::setTaem(const Team t){
         this->team=t;
 }
-int Koma::getx(){
+int Koma::getX(){//関数名を造語にする場合、後の語を大文字にする
         return x;
 }
-int Koma::gety(){
+int Koma::getY(){
         return y;
 }
 bool Koma::getisAlive(){
