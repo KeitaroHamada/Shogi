@@ -16,7 +16,7 @@ void makeRole::setName(const Role r){
             case Null   : name='　';break;
         }
 }
-string makeRole::getname(){
+string makeRole::getname(){//(質問)昨日のデータとロジックがバラバラになる例はわかったけどなぜget,set関数がバラバラになるのか
         return name;
 }
 Role makeRole::getRole(){
