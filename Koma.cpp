@@ -3,7 +3,7 @@
 #include"makeKoma.h"
 using namespace std;
 void Koma::setPosition(const int x, const int y){
-        this->x=x;
+        this->x=x;//(質問)昨日ここがprivateにする意味がないって言ってたけど具体的にどうすればいいか
         this->y=y;
 }
 void Koma::setTaem(const Team t){
