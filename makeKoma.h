@@ -31,7 +31,7 @@ class makeRole{
         string name;
         bool naruState;
     public:
-        void setName(const Role r);//駒の名前を設定する関数
+        void setName(const Role r);//駒の名前を設定する関数。個人的にはコンストラクタでやりたい
         string getname();//駒の名前を返す関数
         Role getRole();//駒の役割を返す関数
         void isNaru();//駒が成っていることを記憶して名前を変える関数
