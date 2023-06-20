@@ -5,6 +5,7 @@ using namespace std;
 void Koma::setPosition(const int x, const int y){
             this->x=x;
             this->y=y;
+            //ヘルパ関数を作る
 }
 int Koma::getx(){
         return x;
