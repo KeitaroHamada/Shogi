@@ -2,10 +2,10 @@
 #include<cstring>
 #include"makeKoma.h"
 using namespace std;
-void makeRole::setName(const Role r){
+void Tmp::setName(const Role r){
         this->role=r;
         switch(r){
-            case Hu     : name='歩';break;
+            case Hu     : name='歩';break;//一文字でも“”でくくる
             case Hisya  : name='飛';break;
             case Kaku   : name='角';break;
             case Kyosya : name='香';break;
@@ -16,14 +16,18 @@ void makeRole::setName(const Role r){
             case Null   : name='　';break;
         }
 }
-string makeRole::getname(){
+string Tmp::getName(){        
         return name;
 }
-Role makeRole::getRole(){
+Role Tmp::getRole(){
         return role;
 }
-void makeRole::isNaru(){
-        this->naruState=true;
+bool Tmp::Alive(){
+        return Alive;
+}
+void Tmp::isNaru(){
+        naruState()
+        =true;//(質問)どうやったらclass Komaの中にあるisnaruStateにアクセスできるか
         switch(this->role){
                 case Hu     : name='と';break;
                 case Hisya  : name='龍';break;
@@ -35,7 +39,4 @@ void makeRole::isNaru(){
                 case Ou     : name='王';break;
                 case Null   : name='　';break;
             }
-}
-void makeRole::rePut(){
-        this->naruState=false;
 }

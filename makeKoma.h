@@ -6,9 +6,11 @@ enum Role{Hu, Hisya, Kaku, Kyosya, Keima, Gin, Kin, Ou, Null};//(重要)今の�
 class Koma{
     private:
         int x,y;
-        bool isAlive;
+        bool Alive;
+        bool naruState;
         Team team;
-        void changeTeam(){//駒が取られたときにチームを変更する関数class Komaから呼び出されるヘルパ関数
+        Tmp tmp;//(メモ)クラスの中に別のクラスのオブジェクトをメンバ変数として持つことができる
+        void changeTeam(){//(説明)駒が取られたときにチームを変更する関数class Komaから呼び出されるヘルパ関数
             if(team==team1){
                 team=team2;
             }else if(team==team2){
@@ -16,25 +18,26 @@ class Koma{
             }
         }
     public:
-        void setPosition(const int x, const int y);//駒の座標を設定する関数
-        void setTaem(const Team t);//駒がどのチームに所属しているのかを設定する関数
-        int getX();//駒のx座標を返す関数
-        int getY();//駒のy座標を返す関数
-        bool getisAlive();//駒が生きているかを返す関数
-        Team getTeam();//駒がどのチームに所属しているかを返す関数
-        void Stolen();//駒が死んでいることを記録する関数
-        void Put();//新しく駒が置かれたときにその駒が生きていることを記録する関数
-        void rePut();//最初に駒が置かれたときに成らないのでfalseを代入する関数
+        void setPosition(const int x, const int y);//(説明)駒の座標を設定する関数
+        void setTaem(const Team t);//(説明)駒がどのチームに所属しているのかを設定する関数
+        int getX();//(説明)駒のx座標を返す関数
+        int getY();//(説明)駒のy座標を返す関数
+        bool isAlive();
+        bool naruState();//(説明)駒が生きているかを返す関数
+        Team getTeam();//(説明)駒がどのチームに所属しているかを返す関数
+        void Stolen();//(説明)駒が死んでいることを記録する関数
+        void Put();//(説明)新しく駒が置かれたときにその駒が生きていることを記録する関数
+        void rePut();//(説明)最初に駒が置かれたときに成らないのでfalseを代入する関数
 };
-class makeRole{
+class Tmp{
     private:
         Role role;
         string name;
         bool naruState;
     public:
-        void setName(const Role r);//駒の名前を設定する関数。個人的にはコンストラクタでやりたい
-        string getname();//駒の名前を返す関数
-        Role getRole();//駒の役割を返す関数
-        void isNaru();//駒が成っていることを記憶して名前を変える関数
-        void rePut();//最初に駒が置かれたときに成らないのでfalseを代入する関数
+        void setName(const Role r);//(説明)駒の名前を設定する関数。個人的にはコンストラクタでやりたい
+        string getName();//(説明)駒の名前を返す関数
+        Role getRole();//(説明)駒の役割を返す関数
+        bool naruState();//(説明)駒が生きているかを返す関数
+        void isNaru();//(説明)駒が成っていることを記憶して名前を変える関数
 };
