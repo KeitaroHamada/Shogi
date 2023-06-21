@@ -2,7 +2,8 @@
 #include "Koma.h"
 class Field{
     private:
-        vector<Koma>koma;                                                                                                                                                                                                                                                                                                                                               qq                                                                                                                                                                                                                                                                                  
+        Koma koma[9][9];                                                                                                                                                                                                                                                                                                                                              qq                                                                                                                                                                                                                                                                                  
     public:
+        Field(Koma k[9][9]);
         void showField();
 };
