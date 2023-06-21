@@ -9,6 +9,7 @@ Field::Field(Koma koma[9][9]){
         }
     }
 }
+
 void Field::showField(){
     string kansuuji[9]={"一","二","三","四","五","六","七","八","九"};
         Koma k[9][9];
