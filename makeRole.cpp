@@ -16,7 +16,7 @@ void Tmp::setName(const Role r){
             case Null   : name="　";break;
         }
 }
-string Tmp::getName(){        
+string Tmp::getName(){
         return name;
 }
 Role Tmp::getRole(){
@@ -25,7 +25,7 @@ Role Tmp::getRole(){
 bool Tmp::getnaruState(){
         return naruState;
 }
-void Tmp::isNaru(){
+void Tmp::isNaru(){//(提案)成った時は違うRoleに変更しない？
         switch(role){
                 case Hu     : name="と";role=To;break;
                 case Hisya  : name="龍";role=Ryu;break;
@@ -35,7 +35,7 @@ void Tmp::isNaru(){
                 case Gin    : name="金";role-Kin;break;
                 case Kin    : name="金";role=Kin;break;
                 case Ou     : name="王";role=Kin;break;
-                case Null   : name="　";role=Kin;break;
+                case Null   : name="　";
             }
 }
 void Tmp::rePut(){

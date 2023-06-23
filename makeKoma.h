@@ -2,7 +2,7 @@
 #include<cstring>
 using namespace std;
 enum Team{team1, team2, nothing};
-enum Role{Hu, Hisya, Kaku, Kyosya, Keima, Gin, Kin, Ou, Null, To, Ryu, Uma};//(重要)今のままだとRoleの中身を変えたときにプログラムすべてを変えないといけなくなり、変更に弱くなってしまう
+enum Role{Hu, Hisya, Kaku, Kyosya, Keima, Gin, Kin, Ou, To, Ryu, Uma, Null};//(重要)今のままだとRoleの中身を変えたときにプログラムすべてを変えないといけなくなり、変更に弱くなってしまう
 class Koma{
     private:
         int x,y;

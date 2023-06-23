@@ -9,7 +9,7 @@ void Koma::setPosition(const int x, const int y){//(重要)メンバ変数がpri
 void Koma::setTaem(const Team t){
         team=t;
 }
-int Koma::getX(){//(メモ)関数名を造語にする場合、後の語を大文字にする
+int Koma::getX(){//(メモ)関数名を造語にする場合、後の語(二語目もしくは三語目)を大文字にする
         return x;
 }
 int Koma::getY(){
