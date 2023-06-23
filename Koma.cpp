@@ -7,7 +7,7 @@ void Koma::setPosition(const int x, const int y){//(重要)メンバ変数がpri
         this->y=y;
 }
 void Koma::setTaem(const Team t){
-        this->team=t;
+        team=t;
 }
 int Koma::getX(){//(メモ)関数名を造語にする場合、後の語を大文字にする
         return x;
@@ -22,7 +22,7 @@ Team Koma::getTeam(){
         return team;
 }
 void Koma::Stolen(){
-        this->Alive=false;
+        Alive=false;
         changeTeam();
 }
 void Koma::changeTeam(){
@@ -33,5 +33,5 @@ void Koma::changeTeam(){
         }
 }
 void Koma::Put(){
-        this->Alive=true;
+        Alive=true;
 }

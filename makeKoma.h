@@ -2,7 +2,7 @@
 #include<cstring>
 using namespace std;
 enum Team{team1, team2, nothing};
-enum Role{Hu, Hisya, Kaku, Kyosya, Keima, Gin, Kin, Ou, Null};//(重要)今のままだとRoleの中身を変えたときにプログラムすべてを変えないといけなくなり、変更に弱くなってしまう
+enum Role{Hu, Hisya, Kaku, Kyosya, Keima, Gin, Kin, Ou, Null, To, Ryu, Uma};//(重要)今のままだとRoleの中身を変えたときにプログラムすべてを変えないといけなくなり、変更に弱くなってしまう
 class Koma{
     private:
         int x,y;
@@ -32,7 +32,7 @@ class Tmp{
         string name;
         bool naruState;
     public:
-        void setName(const Role r);//(説明)駒の名前を設定する関数。個人的にはコンストラクタでやりたい
+        void setName(const Role r);//(説明)駒の役と名前を設定する関数。個人的にはコンストラクタでやりたい
         string getName();//(説明)駒の名前を返す関数
         Role getRole();//(説明)駒の役割を返す関数
         bool getnaruState();//(説明)駒の状態を返す関数
