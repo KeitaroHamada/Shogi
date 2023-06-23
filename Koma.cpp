@@ -15,8 +15,8 @@ int Koma::getX(){//(メモ)関数名を造語にする場合、後の語を大�
 int Koma::getY(){
         return y;
 }
-bool Koma::getnaruState(){
-        return naruState;
+bool Koma::isAlive(){
+        return Alive;
 }
 Team Koma::getTeam(){
         return team;
@@ -34,7 +34,4 @@ void Koma::changeTeam(){
 }
 void Koma::Put(){
         this->Alive=true;
-}
-void Koma::rePut(){
-        naruState=true;
 }

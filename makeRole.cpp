@@ -22,12 +22,10 @@ string Tmp::getName(){
 Role Tmp::getRole(){
         return role;
 }
-bool Tmp::Alive(){
-        return Alive;
+bool Tmp::getnaruState(){
+        return naruState;
 }
 void Tmp::isNaru(){
-        naruState()
-        =true;//(質問)どうやったらclass Komaの中にあるisnaruStateにアクセスできるか
         switch(this->role){
                 case Hu     : name='と';break;
                 case Hisya  : name='龍';break;
@@ -39,4 +37,7 @@ void Tmp::isNaru(){
                 case Ou     : name='王';break;
                 case Null   : name='　';break;
             }
+}
+void Tmp::rePut(){
+        naruState=false;
 }
